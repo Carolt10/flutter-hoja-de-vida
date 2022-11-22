@@ -1,3 +1,5 @@
+import 'package:cv/ui/screens/widgets/experience_widget.dart';
+import 'package:cv/ui/screens/widgets/skills_widget.dart';
 import 'package:flutter/material.dart';
 
 class ResumeScreen extends StatelessWidget {
@@ -81,7 +83,7 @@ class _Body extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Desarrollador de software flutter sin experiencia laboral pero con toda la actitud de aportar y seguir aprendiendo diferentes lenguajes y tecnologías  en aplicaciones móviles con Flutter y apasionada por la tecnología.',
+            'Estudiante actual de flutter con toda la actitud de aportar y seguir aprendiendo diferentes lenguajes y tecnologías  en aplicaciones móviles y buscando la oportunidad para tener experiencia laboral. Estoy en la comunidad de Ibagirls',
             style: TextStyle(fontSize: 16),
             textAlign: TextAlign.justify,
           ),
@@ -96,146 +98,194 @@ class _Body extends StatelessWidget {
             height: 20,
           ),
           Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                children: [
-                  Container(
-                    width: 80,
-                    height: 80,
-                    padding: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                        color: Colors.blue[400],
-                        borderRadius: BorderRadius.circular(10)),
-                    child: const CircleAvatar(
-                      backgroundImage: AssetImage('assets/flutter.png'),
-                      radius: 20,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(8)),
-                  const Text('Flutter', style: TextStyle(fontSize: 14)),
-                ],
+              SkillWidget(
+                name: 'Flutter',
+                backgroundColor: Colors.lightBlueAccent,
+                image: 'assets/flutter.png',
               ),
-              Column(
-                children: [
-                  Container(
-                    width: 80,
-                    height: 80,
-                    padding: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                        color: Colors.yellow[400],
-                        borderRadius: BorderRadius.circular(10)),
-                    child: const CircleAvatar(
-                      backgroundImage: AssetImage('assets/javascript.jpg'),
-                      radius: 20,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(8)),
-                  const Text('JavaScript', style: TextStyle(fontSize: 14)),
-                ],
-              ),
-              Column(
-                children: [
-                  Container(
-                    width: 80.0,
-                    height: 80.0,
-                    padding: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                        color: Colors.red[400],
-                        borderRadius: BorderRadius.circular(10)),
-                    child: const CircleAvatar(
-                      backgroundImage: AssetImage('assets/html5-logo.png'),
-                      radius: 20,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(8)),
-                  const Text('HTML', style: TextStyle(fontSize: 14)),
-                ],
-              ),
+              SkillWidget(
+                  name: 'JavaScript',
+                  backgroundColor: Colors.yellow,
+                  image: 'assets/javaScript-logo.png'),
+              SkillWidget(
+                  name: 'HTML',
+                  backgroundColor: Colors.redAccent,
+                  image: 'assets/html5-logo.png'),
             ],
           ),
+
+          // Row(
+          //   //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //   crossAxisAlignment: CrossAxisAlignment.start,
+          //   children: [
+          //     Column(
+          //       children: [
+          //         Container(
+          //           width: 80,
+          //           height: 80,
+          //           padding: EdgeInsets.all(5),
+          //           decoration: BoxDecoration(
+          //               color: Colors.blue[400],
+          //               borderRadius: BorderRadius.circular(10)),
+          //           child: const CircleAvatar(
+          //             backgroundImage: AssetImage('assets/flutter.png'),
+          //             radius: 20,
+          //           ),
+          //         ),
+          //         Padding(padding: EdgeInsets.all(8)),
+          //         const Text('Flutter', style: TextStyle(fontSize: 14)),
+          //       ],
+          //     ),
+          //     Column(
+          //       children: [
+          //         Container(
+          //           width: 80,
+          //           height: 80,
+          //           padding: EdgeInsets.all(5),
+          //           decoration: BoxDecoration(
+          //               color: Colors.yellow[400],
+          //               borderRadius: BorderRadius.circular(10)),
+          //           child: const CircleAvatar(
+          //             backgroundImage: AssetImage('assets/javascript.jpg'),
+          //             radius: 20,
+          //           ),
+          //         ),
+          //         Padding(padding: EdgeInsets.all(8)),
+          //         const Text('JavaScript', style: TextStyle(fontSize: 14)),
+          //       ],
+          //     ),
+          //     Column(
+          //       children: [
+          //         Container(
+          //           width: 80.0,
+          //           height: 80.0,
+          //           padding: EdgeInsets.all(5),
+          //           decoration: BoxDecoration(
+          //               color: Colors.red[400],
+          //               borderRadius: BorderRadius.circular(10)),
+          //           child: const CircleAvatar(
+          //             backgroundImage: AssetImage('assets/html5-logo.png'),
+          //             radius: 20,
+          //           ),
+          //         ),
+          //         Padding(padding: EdgeInsets.all(8)),
+          //         const Text('HTML', style: TextStyle(fontSize: 14)),
+          //       ],
+          //     ),
+          //   ],
+          // ),
           SizedBox(
             height: 25,
           ),
-          Text(
-            'Experiencia',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
+          // Text(
+          //   'Experiencia',
+          //   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          // ),
+          // SizedBox(
+          //   height: 20,
+          // ),
+          // Row(
+          //   // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //   crossAxisAlignment: CrossAxisAlignment.start,
+          //   children: [
+          //     Expanded(
+          //       flex: 2,
+          //       child: Column(
+          //         children: [
+          //           Container(
+          //             height: 120,
+          //             padding: EdgeInsets.all(5),
+          //             decoration: BoxDecoration(
+          //                 color: Colors.white,
+          //                 borderRadius: BorderRadius.circular(10)),
+          //             child: Column(
+          //               mainAxisAlignment: MainAxisAlignment.center,
+          //               children: [
+          //                 Text(
+          //                   'Jun 2021 - Present',
+          //                   textAlign: TextAlign.center,
+          //                   style: TextStyle(
+          //                       fontSize: 16, fontWeight: FontWeight.bold),
+          //                 )
+          //               ],
+          //             ),
+          //           ),
+          //         ],
+          //       ),
+          //     ),
+          //     SizedBox(
+          //       width: 25,
+          //     ),
+          //     Expanded(
+          //       flex: 2,
+          //       child: Container(
+          //         height: 100,
+          //         padding: EdgeInsets.all(5),
+          //         decoration: BoxDecoration(
+          //             color: Colors.grey[200],
+          //             borderRadius: BorderRadius.circular(7)),
+          //         child: Column(
+          //           mainAxisAlignment: MainAxisAlignment.center,
+          //           children: [
+          //             Text(
+          //               'Junior Flutter',
+          //               textAlign: TextAlign.center,
+          //               style: TextStyle(
+          //                   fontSize: 16, fontWeight: FontWeight.bold),
+          //             )
+          //           ],
+          //         ),
+          //       ),
+          //     ),
+          //     Expanded(
+          //       flex: 1,
+          //       child: Container(
+          //         height: 120,
+          //         child: Center(
+          //           child: const CircleAvatar(
+          //             backgroundImage: AssetImage('assets/Facebook.png'),
+          //             radius: 30,
+          //           ),
+          //         ),
+          //       ),
+          //     ),
+          //   ],
+          // ),
           SizedBox(
             height: 20,
           ),
-          Row(
-            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                flex: 2,
-                child: Column(
-                  children: [
-                    Container(
-                      height: 120,
-                      padding: EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Jun 2021 - Present',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 25,
-              ),
-              Expanded(
-                flex: 2,
-                child: Container(
-                  height: 100,
-                  padding: EdgeInsets.all(5),
-                  decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(7)),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Junior Flutter',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              Expanded(
-                flex: 1,
-                child: Container(
-                  height: 120,
-                  child: Center(
-                    child: const CircleAvatar(
-                      backgroundImage: AssetImage('assets/Facebook.png'),
-                      radius: 30,
-                    ),
-                  ),
-                ),
-              ),
-            ],
+
+          Text(
+            'Experiencia',
+            style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.black87),
+          ),
+          ExperienceWidget(
+            experienceTime: 'Jul 2021 - present',
+            role: 'Student',
+            company: 'Ibagirls',
+            companyLogo: 'assets/ibagirlsDev.jpg',
+          ),
+          ExperienceWidget(
+            experienceTime: 'Dec 2020 - Dec 2021',
+            role: 'Student',
+            company: 'Facebook',
+            companyLogo: 'assets/Facebook.png',
+          ),
+          ExperienceWidget(
+            experienceTime: 'Jul 2020 - Nov 2020',
+            role: 'Student',
+            company: 'Toyota',
+            companyLogo: 'assets/toyota_logo.jpg',
           ),
           SizedBox(
-            height: 80,
+            height: 30,
           ),
           Row(
             children: [
@@ -245,7 +295,7 @@ class _Body extends StatelessWidget {
                   Text(
                     '  Correo electronico: carotati16@gmail.com',
                     style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Colors.black87),
                   ),
@@ -267,7 +317,7 @@ class _Body extends StatelessWidget {
                   Text(
                     '  Github: https://github.com/Carolt10',
                     style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                         color: Colors.black87),
                   ),

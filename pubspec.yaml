@@ -65,9 +65,13 @@ flutter:
     - assets/flutter.png
     - assets/flutter2.jpg
     - assets/html5-logo.png
-    - assets/javascript.jpg
+    - assets/javaScript-logo.png
+    - assets/ibagirlsDev.jpg
     - assets/Facebook.png
+    - assets/toyota_logo.jpg
     - assets/github.png
+    
+    
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
